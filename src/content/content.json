@@ -1,15 +1,18 @@
 {
     "poems": {
         "test1": {
-            "file": "@/content/poems/test1.txt",
+            "title": "Test #1",
+            "file": "/content/poems/test1.txt",
             "date": "2025.01.18"
         },
         "test2": {
-            "file": "@/content/poems/test2.txt",
+            "title": "Test #2",
+            "file": "/content/poems/test2.txt",
             "date": "2025.01.28"
         },
         "test3": {
-            "file": "@/content/poems/test3.txt",
+            "title": "Test #3",
+            "file": "/content/poems/test3.txt",
             "date": "2025.01.15"
         }
     }

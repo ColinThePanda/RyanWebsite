@@ -1,41 +1,46 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout title="Home">
-  <main class="min-h-screen bg-black text-white px-10 pt-8 pb-16">
-
-    <div class="max-w-3xl">
-
+  <main class="min-h-screen bg-black text-white px-10 pt-8 p-0">
+    <div class="max-w-3xl p-0">
       <!-- Main categories -->
-      <div class="text-6xl md:text-8xl leading-tight font-serif space-y-3">
-        
-        <a href="/poems" class="block text-blue-500 hover:text-blue-400 transition">
+      <div class="text-6xl md:text-8xl leading-tight font-serif space-y-3 p-0">
+        <a
+          href="/poems"
+          class="block text-blue-500 hover:text-blue-400 transition"
+        >
           poems
         </a>
 
         <div class="pl-16">
-          <a href="/essays" class="block text-red-500 hover:text-red-400 transition">
+          <a
+            href="/essays"
+            class="block text-red-500 hover:text-red-400 transition"
+          >
             essays
           </a>
 
           <div class="pl-16">
-            <a href="/notes" class="block text-gray-300 hover:text-gray-100 transition">
+            <a
+              href="/notes"
+              class="block text-gray-300 hover:text-gray-100 transition"
+            >
               notes
             </a>
           </div>
         </div>
-
       </div>
 
-      <!-- More -->
       <div class="mt-12 pl-2">
-        <a href="/more" class="text-2xl md:text-3xl text-purple-400 hover:text-purple-300 transition font-serif">
+        <a
+          href="/more"
+          class="text-2xl md:text-3xl text-purple-400 hover:text-purple-300 transition font-serif"
+        >
           more
         </a>
       </div>
-
     </div>
-
   </main>
 </Layout>

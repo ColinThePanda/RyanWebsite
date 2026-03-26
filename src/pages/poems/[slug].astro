@@ -1,0 +1,36 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Writing from "@/components/TextPage.astro";
+
+// Import all poems as raw text
+const poems = import.meta.glob("@/content/poems/*.txt", {
+  as: "raw",
+  eager: true,
+});
+
+// Convert file paths → slugs
+const entries = Object.entries(poems).map(([path, content]) => {
+  const slug = path.split("/").pop().replace(".txt", "");
+  return { slug, content };
+});
+
+export function getStaticPaths() {
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { content: entry.content, slug: entry.slug },
+  }));
+}
+
+const { content, slug } = Astro.props;
+
+// Optional: derive title from slug
+const title = slug.replace(/-/g, " ");
+---
+
+<Layout title={title}>
+  <Writing title={title} file="">
+    <div class="whitespace-pre-wrap leading-relaxed text-foreground/90">
+      {content}
+    </div>
+  </Writing>
+</Layout>
