@@ -1,0 +1,15 @@
+---
+import type { TitleSegment } from "@/lib/styled-titles";
+
+interface Props {
+  segments: TitleSegment[];
+}
+
+const { segments } = Astro.props;
+---
+
+{
+  segments.map((segment) => (
+    <span class={segment.className}>{segment.text}</span>
+  ))
+}

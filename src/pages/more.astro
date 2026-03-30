@@ -1,0 +1,33 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import StyledTitle from "@/components/StyledTitle.astro";
+import { withBase } from "@/lib/base";
+import { moreSections } from "@/lib/more";
+import { plainTitle } from "@/lib/styled-titles";
+---
+
+<Layout title="More">
+  <section class="px-6 py-8 md:px-10">
+    <div class="max-w-4xl">
+      <h1 class="text-5xl font-serif lowercase text-violet-300 md:text-7xl">more</h1>
+
+      <div class="mt-10 space-y-2">
+        {
+          moreSections.map((section) => (
+            <div class="text-xl md:text-2xl">
+              <a
+                href={withBase(`/${section.slug}`)}
+                class:list={[
+                  "font-serif transition",
+                  "text-violet-300 hover:text-violet-200",
+                ]}
+              >
+                <StyledTitle segments={plainTitle(section.label)} />
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

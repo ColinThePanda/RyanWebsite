@@ -1,0 +1,38 @@
+---
+import StyledTitle from "@/components/StyledTitle.astro";
+import Layout from "@/layouts/Layout.astro";
+
+const titleSegments = [
+  { text: "cr" },
+  { text: "\u0259", className: "text-orange-500" },
+  { text: "dits" },
+];
+---
+
+<Layout title="credits">
+  <section class="px-4 pt-8 sm:px-10">
+    <div class="w-full">
+      <h1 class="text-6xl leading-tight font-serif">
+        <StyledTitle segments={titleSegments} />
+      </h1>
+
+      <div class="mt-10 max-w-4xl space-y-6 font-serif text-2xl leading-tight">
+        <p class="text-zinc-300">Muchas gracias to:</p>
+        <p class="text-white">Mom for raising me</p>
+        <p class="text-white">
+          Colin for building this website (
+          <a
+            href="https://github.com/colinthepanda"
+            class="text-zinc-300 transition hover:text-white"
+            target="_blank"
+            rel="noreferrer"
+          >
+            check out his GitHub
+          </a>
+          )
+        </p>
+        <p class="text-white">Mr. McGovern for first exposing me to poetry</p>
+      </div>
+    </div>
+  </section>
+</Layout>

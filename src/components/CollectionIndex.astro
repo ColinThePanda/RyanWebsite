@@ -1,0 +1,43 @@
+---
+import StyledTitle from "@/components/StyledTitle.astro";
+import { sectionLabels, type SectionKey } from "@/lib/sections";
+
+interface Props {
+  collection: SectionKey;
+  entries: Array<{
+    title: string;
+    date?: string;
+    url: string;
+  }>;
+}
+
+const { collection, entries } = Astro.props;
+const section = sectionLabels[collection];
+---
+
+<section class="px-4 pt-8 sm:px-10">
+  <div class="w-full">
+    <h1 class="text-6xl leading-tight font-serif">
+      <StyledTitle segments={section.titleSegments} />
+    </h1>
+
+    {
+      entries.length > 0 ? (
+        <div class="mt-10 space-y-8">
+          {entries.map((entry) => (
+            <div class="grid grid-cols-[8rem_1fr] gap-x-6 text-2xl font-serif leading-tight sm:grid-cols-[9rem_1fr]">
+              <div class="text-white/55">
+                {entry.date ?? ""}
+              </div>
+              <a href={entry.url} class="text-white transition hover:text-zinc-300">
+                {entry.title}
+              </a>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p class="mt-10 text-zinc-500">nothing here yet</p>
+      )
+    }
+  </div>
+</section>

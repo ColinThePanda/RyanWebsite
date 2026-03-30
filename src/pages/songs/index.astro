@@ -1,0 +1,11 @@
+---
+import AudioIndex from "@/components/AudioIndex.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getMediaEntries } from "@/lib/media";
+
+const entries = getMediaEntries("songs");
+---
+
+<Layout title="Songs">
+  <AudioIndex collection="songs" entries={entries} />
+</Layout>

@@ -1,0 +1,15 @@
+---
+import WritingPage from "@/components/WritingPage.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getStaticTextPaths, type TextEntry } from "@/lib/writings";
+
+export function getStaticPaths() {
+  return getStaticTextPaths("essays");
+}
+
+const { entry } = Astro.props as { entry: TextEntry };
+---
+
+<Layout title={entry.title}>
+  <WritingPage entry={entry} />
+</Layout>

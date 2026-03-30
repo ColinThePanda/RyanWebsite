@@ -1,0 +1,15 @@
+---
+import AlbumPage from "@/components/AlbumPage.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getStaticAlbumPaths, type AlbumEntry } from "@/lib/media";
+
+export function getStaticPaths() {
+  return getStaticAlbumPaths();
+}
+
+const { album } = Astro.props as { album: AlbumEntry };
+---
+
+<Layout title={album.title}>
+  <AlbumPage album={album} />
+</Layout>

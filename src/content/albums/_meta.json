@@ -1,0 +1,105 @@
+[
+	{
+		"slug": "TPAB",
+		"title": "To Pimp a Butterfly",
+		"date": "2015.03.15",
+		"tracks": [
+			{
+				"file": "Wesley's Theory.mp3",
+				"slug": "wesleys-theory",
+				"title": "Wesley's Theory",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "For Free？ (Interlude).mp3",
+				"slug": "for-free-interlude",
+				"title": "For Free? (Interlude)",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "King Kunta.mp3",
+				"slug": "king-kunta",
+				"title": "King Kunta",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "Institutionalized.mp3",
+				"slug": "institutionalized",
+				"title": "Institutionalized",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "These Walls.mp3",
+				"slug": "these-walls",
+				"title": "These Walls",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "u.mp3",
+				"slug": "u",
+				"title": "u",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "Alright.mp3",
+				"slug": "alright",
+				"title": "Alright",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "For Sale？ (Interlude).mp3",
+				"slug": "for-sale-interlude",
+				"title": "For Sale? (Interlude)",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "Momma.mp3",
+				"slug": "momma",
+				"title": "Momma",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "Hood Politics.mp3",
+				"slug": "hood-politics",
+				"title": "Hood Politics",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "How Much A Dollar Cost.mp3",
+				"slug": "how-much-a-dollar-cost",
+				"title": "How Much A Dollar Cost",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "Complexion (A Zulu Love).mp3",
+				"slug": "complexion-a-zulu-love",
+				"title": "Complexion (A Zulu Love)",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "The Blacker The Berry.mp3",
+				"slug": "the-blacker-the-berry",
+				"title": "The Blacker The Berry",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "You Ain't Gotta Lie (Momma Said).mp3",
+				"slug": "you-aint-gotta-lie-momma-said",
+				"title": "You Ain't Gotta Lie (Momma Said)",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "i.mp3",
+				"slug": "i",
+				"title": "i",
+				"date": "2015.03.15"
+			},
+			{
+				"file": "Mortal Man.mp3",
+				"slug": "mortal-man",
+				"title": "Mortal Man",
+				"date": "2015.03.15"
+			}
+		]
+	}
+]

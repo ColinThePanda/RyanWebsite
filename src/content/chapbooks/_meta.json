@@ -1,0 +1,13 @@
+{
+	"nanite": {
+		"title": "Nanite",
+		"date": "2021.8.11",
+		"pdfUrl": "nanite.pdf",
+		"contentWarning": "Super Cool Math Only For Nerds"
+	},
+	"lighting": {
+		"title": "Real Shading in Unreal Engine 4",
+		"date": "2013.7.25",
+		"pdfUrl": "lighting.pdf"
+	}
+}

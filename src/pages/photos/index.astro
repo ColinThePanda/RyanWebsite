@@ -1,0 +1,11 @@
+---
+import CollectionIndex from "@/components/CollectionIndex.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getMediaEntries } from "@/lib/media";
+
+const entries = getMediaEntries("photos");
+---
+
+<Layout title="Photos">
+  <CollectionIndex collection="photos" entries={entries} />
+</Layout>

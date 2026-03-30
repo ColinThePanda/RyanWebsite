@@ -1,0 +1,11 @@
+---
+import CollectionIndex from "@/components/CollectionIndex.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getEntries } from "@/lib/writings";
+
+const entries = getEntries("essays");
+---
+
+<Layout title="Essays">
+  <CollectionIndex collection="essays" entries={entries} />
+</Layout>

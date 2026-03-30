@@ -1,0 +1,15 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import MediaPage from "@/components/MediaPage.astro";
+import { getStaticAlbumTrackPaths, type AlbumTrack } from "@/lib/media";
+
+export function getStaticPaths() {
+  return getStaticAlbumTrackPaths();
+}
+
+const { track } = Astro.props as { track: AlbumTrack };
+---
+
+<Layout title={track.title}>
+  <MediaPage kind="audio" title={track.title} date={track.date} assetUrl={track.assetUrl} />
+</Layout>

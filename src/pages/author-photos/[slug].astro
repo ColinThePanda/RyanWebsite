@@ -1,0 +1,15 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import MediaPage from "@/components/MediaPage.astro";
+import { getStaticMediaPaths, type MediaEntry } from "@/lib/media";
+
+export function getStaticPaths() {
+  return getStaticMediaPaths("author-photos");
+}
+
+const { entry } = Astro.props as { entry: MediaEntry };
+---
+
+<Layout title={entry.title}>
+  <MediaPage kind="image" title={entry.title} date={entry.date} assetUrl={entry.assetUrl} />
+</Layout>

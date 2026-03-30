@@ -1,32 +1,11 @@
 ---
+import CollectionIndex from "@/components/CollectionIndex.astro";
 import Layout from "@/layouts/Layout.astro";
-import content from "@/content/content.json";
+import { getEntries } from "@/lib/writings";
 
-const poems = Object.entries(content["poems"]);
+const entries = getEntries("poems");
 ---
 
 <Layout title="Poems">
-  <div class="text-left">
-    <table class="border-separate border-spacing-x-4 border-spacing-y-1">
-      <tbody>
-        {
-          poems.map(([slug, poem]) => (
-            <tr>
-              <td class="align-baseline pr-4 whitespace-nowrap text-gray-300">
-                {poem.date}
-              </td>
-              <td class="align-baseline">
-                <a
-                  href={`poems/${slug}`}
-                  class="text-blue-500 hover:text-blue-400 transition"
-                >
-                  {poem.title}
-                </a>
-              </td>
-            </tr>
-          ))
-        }
-      </tbody>
-    </table>
-  </div>
+  <CollectionIndex collection="poems" entries={entries} />
 </Layout>

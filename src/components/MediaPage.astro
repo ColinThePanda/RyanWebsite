@@ -1,0 +1,53 @@
+---
+interface BaseProps {
+  title: string;
+  date?: string;
+  assetUrl: string;
+}
+
+type Props =
+  | (BaseProps & { kind: "audio" })
+  | (BaseProps & { kind: "video" })
+  | (BaseProps & { kind: "image" });
+
+const { kind, title, date, assetUrl } = Astro.props as Props;
+---
+
+<section class="px-4 pt-8 sm:px-10">
+  <div class="w-full">
+    <header>
+      {date && <p class="text-xl font-serif text-white/55">{date}</p>}
+      <h1 class="mt-2 font-serif text-6xl leading-tight text-white">
+        {title}
+      </h1>
+    </header>
+
+    <div class="mt-10">
+      {
+        kind === "audio" && (
+          <audio controls preload="metadata" class="block w-full">
+            <source src={assetUrl} />
+          </audio>
+        )
+      }
+      {
+        kind === "video" && (
+          <video
+            controls
+            preload="metadata"
+            playsinline
+            class="block h-auto max-h-[70vh]"
+            style="width: min(100%, 960px);"
+          >
+            <source src={assetUrl} />
+          </video>
+        )
+      }
+      {
+        kind === "image" && (
+          <img src={assetUrl} alt={title} class="block h-auto max-w-full" />
+        )
+      }
+    </div>
+  </div>
+</section>

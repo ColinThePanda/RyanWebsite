@@ -125,3 +125,25 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  .v-red-dark {
+    color: #8e0000;
+  }
+
+  .v-grey {
+    color: #999999;
+  }
+
+  .v-light-grey {
+    color: #666666;
+  }
+
+  .v-red-berry {
+    color: #cc4125;
+  }
+
+  .v-very-light-grey {
+    color: #404040;
+  }
+}
